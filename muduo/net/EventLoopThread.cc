@@ -9,6 +9,7 @@
 #include "muduo/net/EventLoopThread.h"
 
 #include "muduo/net/EventLoop.h"
+#include "muduo/base/Logging.h"
 
 using namespace muduo;
 using namespace muduo::net;
@@ -16,7 +17,7 @@ using namespace muduo::net;
 /// 传进来的name是char类型的，这里有一个char->string隐式转换
 EventLoopThread::EventLoopThread(const ThreadInitCallback& cb,
                                  const string& name)
-  : loop_(NULL),
+  : loop_(NULL),  /* from main func */
     exiting_(false),
     thread_(std::bind(&EventLoopThread::threadFunc, this), name),
     mutex_(),
@@ -82,6 +83,7 @@ void EventLoopThread::threadFunc()
 
   /// 事件结束
   //assert(exiting_);
+  LOG_DEBUG << "Thread: " << thread_.name() << " Start loop";
   MutexLockGuard lock(mutex_);
   loop_ = NULL;
 }

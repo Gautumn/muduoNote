@@ -23,7 +23,7 @@ TcpServer::TcpServer(EventLoop* loop,
                      const InetAddress& listenAddr,
                      const string& nameArg,
                      Option option)
-  : loop_(CHECK_NOTNULL(loop)),
+  : loop_(CHECK_NOTNULL(loop)), /* From main func */
     ipPort_(listenAddr.toIpPort()),
     name_(nameArg),
     acceptor_(new Acceptor(loop, listenAddr, option == kReusePort)),
@@ -65,6 +65,7 @@ void TcpServer::start()
 
     assert(!acceptor_->listenning());
     /// accepter loop，这个listen函数会被立即调用？？？（isInLoopThread()）
+    LOG_DEBUG << "TcpServer::start->runInLoop";
     loop_->runInLoop(
         std::bind(&Acceptor::listen, get_pointer(acceptor_)));
   }

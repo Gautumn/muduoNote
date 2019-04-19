@@ -10,6 +10,7 @@
 
 #include "muduo/net/EventLoop.h"
 #include "muduo/net/EventLoopThread.h"
+#include "muduo/base/Logging.h"
 
 #include <stdio.h>
 
@@ -17,7 +18,7 @@ using namespace muduo;
 using namespace muduo::net;
 
 EventLoopThreadPool::EventLoopThreadPool(EventLoop* baseLoop, const string& nameArg)
-  : baseLoop_(baseLoop),
+  : baseLoop_(baseLoop),  /* from main func */
     name_(nameArg),
     started_(false),
     numThreads_(0),
@@ -42,6 +43,8 @@ void EventLoopThreadPool::start(const ThreadInitCallback& cb)
     char buf[name_.size() + 32];
     snprintf(buf, sizeof buf, "%s%d", name_.c_str(), i);
     /// 创建事件的线程，用这个类来管理该资源
+    LOG_DEBUG << "Create thread :" << i
+              << "Thread name: " << buf;
     EventLoopThread* t = new EventLoopThread(cb, buf);
     /// 保存该事件线程指针
     threads_.push_back(std::unique_ptr<EventLoopThread>(t));

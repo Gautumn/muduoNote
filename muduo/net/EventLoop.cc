@@ -153,10 +153,12 @@ void EventLoop::runInLoop(Functor cb)
 {
   if (isInLoopThread())
   {
+    LOG_DEBUG << "call callback directly";
     cb();
   }
   else
   {
+    LOG_DEBUG << "queue callback function";
     queueInLoop(std::move(cb));
   }
 }

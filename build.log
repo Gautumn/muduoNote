@@ -1,0 +1,675 @@
+$ ./build.sh 
++ pwd
++ SOURCE_DIR=/home/autumn/repos/muduoNote
++ BUILD_DIR=../build
++ BUILD_TYPE=release
++ INSTALL_DIR=../release-install-cpp11
++ CXX=g++
++ ln -sf ../build/release-cpp11/compile_commands.json
++ mkdir -p ../build/release-cpp11
++ cd ../build/release-cpp11
++ cmake -DCMAKE_BUILD_TYPE=release -DCMAKE_INSTALL_PREFIX=../release-install-cpp11 -DCMAKE_EXPORT_COMPILE_COMMANDS=ON /home/autumn/repos/muduoNote
+-- The C compiler identification is GNU 5.4.0
+-- The CXX compiler identification is GNU 5.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Boost version: 1.58.0
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Looking for pthread_create
+-- Looking for pthread_create - not found
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so  
+-- Found CURL: /usr/lib/x86_64-linux-gnu/libcurl.so (found version "7.47.0") 
+-- Found ZLIB: /usr/lib/x86_64-linux-gnu/libz.so (found version "1.2.8") 
+-- found curl
+-- found protobuf
+-- found zlib
+-- CXX_FLAGS = -g -DCHECK_PTHREAD_RETURN_VALUE -D_FILE_OFFSET_BITS=64 -Wall -Wextra -Werror -Wconversion -Wno-unused-parameter -Wold-style-cast -Woverloaded-virtual -Wpointer-arith -Wshadow -Wwrite-strings -march=native -std=c++11 -rdynamic -O2 -DNDEBUG
+-- Looking for accept4
+-- Looking for accept4 - found
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/autumn/repos/build/release-cpp11
++ make
+Scanning dependencies of target muduo_base
+[  0%] Building CXX object muduo/base/CMakeFiles/muduo_base.dir/AsyncLogging.cc.o
+[  0%] Building CXX object muduo/base/CMakeFiles/muduo_base.dir/Condition.cc.o
+[  1%] Building CXX object muduo/base/CMakeFiles/muduo_base.dir/CountDownLatch.cc.o
+[  1%] Building CXX object muduo/base/CMakeFiles/muduo_base.dir/CurrentThread.cc.o
+[  1%] Building CXX object muduo/base/CMakeFiles/muduo_base.dir/Date.cc.o
+[  1%] Building CXX object muduo/base/CMakeFiles/muduo_base.dir/Exception.cc.o
+[  2%] Building CXX object muduo/base/CMakeFiles/muduo_base.dir/FileUtil.cc.o
+[  2%] Building CXX object muduo/base/CMakeFiles/muduo_base.dir/LogFile.cc.o
+[  2%] Building CXX object muduo/base/CMakeFiles/muduo_base.dir/Logging.cc.o
+[  3%] Building CXX object muduo/base/CMakeFiles/muduo_base.dir/LogStream.cc.o
+[  3%] Building CXX object muduo/base/CMakeFiles/muduo_base.dir/ProcessInfo.cc.o
+[  3%] Building CXX object muduo/base/CMakeFiles/muduo_base.dir/Timestamp.cc.o
+[  3%] Building CXX object muduo/base/CMakeFiles/muduo_base.dir/Thread.cc.o
+[  4%] Building CXX object muduo/base/CMakeFiles/muduo_base.dir/ThreadPool.cc.o
+[  4%] Building CXX object muduo/base/CMakeFiles/muduo_base.dir/TimeZone.cc.o
+[  4%] Linking CXX static library ../../lib/libmuduo_base.a
+[  4%] Built target muduo_base
+Scanning dependencies of target timezone_unittest
+[  4%] Building CXX object muduo/base/tests/CMakeFiles/timezone_unittest.dir/TimeZone_unittest.cc.o
+[  4%] Linking CXX executable ../../../bin/timezone_unittest
+[  4%] Built target timezone_unittest
+Scanning dependencies of target threadpool_test
+[  4%] Building CXX object muduo/base/tests/CMakeFiles/threadpool_test.dir/ThreadPool_test.cc.o
+[  4%] Linking CXX executable ../../../bin/threadpool_test
+[  4%] Built target threadpool_test
+Scanning dependencies of target processinfo_test
+[  4%] Building CXX object muduo/base/tests/CMakeFiles/processinfo_test.dir/ProcessInfo_test.cc.o
+[  4%] Linking CXX executable ../../../bin/processinfo_test
+[  4%] Built target processinfo_test
+Scanning dependencies of target date_unittest
+[  4%] Building CXX object muduo/base/tests/CMakeFiles/date_unittest.dir/Date_unittest.cc.o
+[  4%] Linking CXX executable ../../../bin/date_unittest
+[  4%] Built target date_unittest
+Scanning dependencies of target boundedblockingqueue_test
+[  4%] Building CXX object muduo/base/tests/CMakeFiles/boundedblockingqueue_test.dir/BoundedBlockingQueue_test.cc.o
+[  4%] Linking CXX executable ../../../bin/boundedblockingqueue_test
+[  4%] Built target boundedblockingqueue_test
+Scanning dependencies of target timestamp_unittest
+[  4%] Building CXX object muduo/base/tests/CMakeFiles/timestamp_unittest.dir/Timestamp_unittest.cc.o
+[  5%] Linking CXX executable ../../../bin/timestamp_unittest
+[  5%] Built target timestamp_unittest
+Scanning dependencies of target fileutil_test
+[  6%] Building CXX object muduo/base/tests/CMakeFiles/fileutil_test.dir/FileUtil_test.cc.o
+[  6%] Linking CXX executable ../../../bin/fileutil_test
+[  6%] Built target fileutil_test
+Scanning dependencies of target threadlocal_test
+[  6%] Building CXX object muduo/base/tests/CMakeFiles/threadlocal_test.dir/ThreadLocal_test.cc.o
+[  6%] Linking CXX executable ../../../bin/threadlocal_test
+[  6%] Built target threadlocal_test
+Scanning dependencies of target threadlocalsingleton_test
+[  7%] Building CXX object muduo/base/tests/CMakeFiles/threadlocalsingleton_test.dir/ThreadLocalSingleton_test.cc.o
+[  7%] Linking CXX executable ../../../bin/threadlocalsingleton_test
+[  7%] Built target threadlocalsingleton_test
+Scanning dependencies of target exception_test
+[  7%] Building CXX object muduo/base/tests/CMakeFiles/exception_test.dir/Exception_test.cc.o
+[  8%] Linking CXX executable ../../../bin/exception_test
+[  8%] Built target exception_test
+Scanning dependencies of target asynclogging_test
+[  9%] Building CXX object muduo/base/tests/CMakeFiles/asynclogging_test.dir/AsyncLogging_test.cc.o
+[  9%] Linking CXX executable ../../../bin/asynclogging_test
+[  9%] Built target asynclogging_test
+Scanning dependencies of target blockingqueue_test
+[ 10%] Building CXX object muduo/base/tests/CMakeFiles/blockingqueue_test.dir/BlockingQueue_test.cc.o
+[ 10%] Linking CXX executable ../../../bin/blockingqueue_test
+[ 10%] Built target blockingqueue_test
+Scanning dependencies of target thread_test
+[ 12%] Building CXX object muduo/base/tests/CMakeFiles/thread_test.dir/Thread_test.cc.o
+[ 12%] Linking CXX executable ../../../bin/thread_test
+[ 12%] Built target thread_test
+Scanning dependencies of target atomic_unittest
+[ 12%] Building CXX object muduo/base/tests/CMakeFiles/atomic_unittest.dir/Atomic_unittest.cc.o
+[ 12%] Linking CXX executable ../../../bin/atomic_unittest
+[ 12%] Built target atomic_unittest
+Scanning dependencies of target mutex_test
+[ 12%] Building CXX object muduo/base/tests/CMakeFiles/mutex_test.dir/Mutex_test.cc.o
+[ 12%] Linking CXX executable ../../../bin/mutex_test
+[ 12%] Built target mutex_test
+Scanning dependencies of target blockingqueue_bench
+[ 12%] Building CXX object muduo/base/tests/CMakeFiles/blockingqueue_bench.dir/BlockingQueue_bench.cc.o
+[ 12%] Linking CXX executable ../../../bin/blockingqueue_bench
+[ 12%] Built target blockingqueue_bench
+Scanning dependencies of target gzipfile_test
+[ 13%] Building CXX object muduo/base/tests/CMakeFiles/gzipfile_test.dir/GzipFile_test.cc.o
+[ 13%] Linking CXX executable ../../../bin/gzipfile_test
+[ 13%] Built target gzipfile_test
+Scanning dependencies of target logfile_test
+[ 14%] Building CXX object muduo/base/tests/CMakeFiles/logfile_test.dir/LogFile_test.cc.o
+[ 14%] Linking CXX executable ../../../bin/logfile_test
+[ 14%] Built target logfile_test
+Scanning dependencies of target logging_test
+[ 14%] Building CXX object muduo/base/tests/CMakeFiles/logging_test.dir/Logging_test.cc.o
+[ 14%] Linking CXX executable ../../../bin/logging_test
+[ 14%] Built target logging_test
+Scanning dependencies of target logstream_bench
+[ 15%] Building CXX object muduo/base/tests/CMakeFiles/logstream_bench.dir/LogStream_bench.cc.o
+[ 15%] Linking CXX executable ../../../bin/logstream_bench
+[ 15%] Built target logstream_bench
+Scanning dependencies of target singleton_test
+[ 15%] Building CXX object muduo/base/tests/CMakeFiles/singleton_test.dir/Singleton_test.cc.o
+[ 15%] Linking CXX executable ../../../bin/singleton_test
+[ 15%] Built target singleton_test
+Scanning dependencies of target logstream_test
+[ 15%] Building CXX object muduo/base/tests/CMakeFiles/logstream_test.dir/LogStream_test.cc.o
+[ 15%] Linking CXX executable ../../../bin/logstream_test
+[ 15%] Built target logstream_test
+Scanning dependencies of target fork_test
+[ 15%] Building CXX object muduo/base/tests/CMakeFiles/fork_test.dir/Fork_test.cc.o
+[ 15%] Linking CXX executable ../../../bin/fork_test
+[ 15%] Built target fork_test
+Scanning dependencies of target singleton_threadlocal_test
+[ 16%] Building CXX object muduo/base/tests/CMakeFiles/singleton_threadlocal_test.dir/SingletonThreadLocal_test.cc.o
+[ 16%] Linking CXX executable ../../../bin/singleton_threadlocal_test
+[ 16%] Built target singleton_threadlocal_test
+Scanning dependencies of target thread_bench
+[ 16%] Building CXX object muduo/base/tests/CMakeFiles/thread_bench.dir/Thread_bench.cc.o
+[ 16%] Linking CXX executable ../../../bin/thread_bench
+[ 16%] Built target thread_bench
+Scanning dependencies of target muduo_net
+[ 16%] Building CXX object muduo/net/CMakeFiles/muduo_net.dir/Acceptor.cc.o
+[ 16%] Building CXX object muduo/net/CMakeFiles/muduo_net.dir/Buffer.cc.o
+[ 16%] Building CXX object muduo/net/CMakeFiles/muduo_net.dir/Channel.cc.o
+[ 17%] Building CXX object muduo/net/CMakeFiles/muduo_net.dir/Connector.cc.o
+[ 17%] Building CXX object muduo/net/CMakeFiles/muduo_net.dir/EventLoop.cc.o
+[ 17%] Building CXX object muduo/net/CMakeFiles/muduo_net.dir/EventLoopThread.cc.o
+[ 17%] Building CXX object muduo/net/CMakeFiles/muduo_net.dir/EventLoopThreadPool.cc.o
+[ 18%] Building CXX object muduo/net/CMakeFiles/muduo_net.dir/InetAddress.cc.o
+[ 18%] Building CXX object muduo/net/CMakeFiles/muduo_net.dir/Poller.cc.o
+[ 18%] Building CXX object muduo/net/CMakeFiles/muduo_net.dir/poller/DefaultPoller.cc.o
+[ 19%] Building CXX object muduo/net/CMakeFiles/muduo_net.dir/poller/EPollPoller.cc.o
+[ 19%] Building CXX object muduo/net/CMakeFiles/muduo_net.dir/poller/PollPoller.cc.o
+[ 19%] Building CXX object muduo/net/CMakeFiles/muduo_net.dir/Socket.cc.o
+[ 19%] Building CXX object muduo/net/CMakeFiles/muduo_net.dir/SocketsOps.cc.o
+[ 20%] Building CXX object muduo/net/CMakeFiles/muduo_net.dir/TcpClient.cc.o
+[ 20%] Building CXX object muduo/net/CMakeFiles/muduo_net.dir/TcpConnection.cc.o
+[ 20%] Building CXX object muduo/net/CMakeFiles/muduo_net.dir/TcpServer.cc.o
+[ 20%] Building CXX object muduo/net/CMakeFiles/muduo_net.dir/Timer.cc.o
+[ 21%] Building CXX object muduo/net/CMakeFiles/muduo_net.dir/TimerQueue.cc.o
+[ 21%] Linking CXX static library ../../lib/libmuduo_net.a
+[ 21%] Built target muduo_net
+Scanning dependencies of target muduo_http
+[ 21%] Building CXX object muduo/net/http/CMakeFiles/muduo_http.dir/HttpServer.cc.o
+[ 23%] Building CXX object muduo/net/http/CMakeFiles/muduo_http.dir/HttpResponse.cc.o
+[ 23%] Building CXX object muduo/net/http/CMakeFiles/muduo_http.dir/HttpContext.cc.o
+[ 23%] Linking CXX static library ../../../lib/libmuduo_http.a
+[ 23%] Built target muduo_http
+Scanning dependencies of target httpserver_test
+[ 24%] Building CXX object muduo/net/http/CMakeFiles/httpserver_test.dir/tests/HttpServer_test.cc.o
+[ 24%] Linking CXX executable ../../../bin/httpserver_test
+[ 24%] Built target httpserver_test
+Scanning dependencies of target httprequest_unittest
+[ 24%] Building CXX object muduo/net/http/CMakeFiles/httprequest_unittest.dir/tests/HttpRequest_unittest.cc.o
+[ 24%] Linking CXX executable ../../../bin/httprequest_unittest
+[ 24%] Built target httprequest_unittest
+Scanning dependencies of target muduo_inspect
+[ 25%] Building CXX object muduo/net/inspect/CMakeFiles/muduo_inspect.dir/Inspector.cc.o
+[ 25%] Building CXX object muduo/net/inspect/CMakeFiles/muduo_inspect.dir/PerformanceInspector.cc.o
+[ 25%] Building CXX object muduo/net/inspect/CMakeFiles/muduo_inspect.dir/ProcessInspector.cc.o
+[ 25%] Building CXX object muduo/net/inspect/CMakeFiles/muduo_inspect.dir/SystemInspector.cc.o
+[ 26%] Linking CXX static library ../../../lib/libmuduo_inspect.a
+[ 26%] Built target muduo_inspect
+Scanning dependencies of target inspector_test
+[ 26%] Building CXX object muduo/net/inspect/CMakeFiles/inspector_test.dir/tests/Inspector_test.cc.o
+[ 26%] Linking CXX executable ../../../bin/inspector_test
+[ 26%] Built target inspector_test
+Scanning dependencies of target timerqueue_unittest
+[ 27%] Building CXX object muduo/net/tests/CMakeFiles/timerqueue_unittest.dir/TimerQueue_unittest.cc.o
+[ 27%] Linking CXX executable ../../../bin/timerqueue_unittest
+[ 27%] Built target timerqueue_unittest
+Scanning dependencies of target tcpclient_reg3
+[ 27%] Building CXX object muduo/net/tests/CMakeFiles/tcpclient_reg3.dir/TcpClient_reg3.cc.o
+[ 27%] Linking CXX executable ../../../bin/tcpclient_reg3
+[ 27%] Built target tcpclient_reg3
+Scanning dependencies of target echoclient_unittest
+[ 28%] Building CXX object muduo/net/tests/CMakeFiles/echoclient_unittest.dir/EchoClient_unittest.cc.o
+[ 28%] Linking CXX executable ../../../bin/echoclient_unittest
+[ 28%] Built target echoclient_unittest
+Scanning dependencies of target buffer_unittest
+[ 29%] Building CXX object muduo/net/tests/CMakeFiles/buffer_unittest.dir/Buffer_unittest.cc.o
+[ 29%] Linking CXX executable ../../../bin/buffer_unittest
+[ 29%] Built target buffer_unittest
+Scanning dependencies of target eventloop_unittest
+[ 29%] Building CXX object muduo/net/tests/CMakeFiles/eventloop_unittest.dir/EventLoop_unittest.cc.o
+[ 29%] Linking CXX executable ../../../bin/eventloop_unittest
+[ 29%] Built target eventloop_unittest
+Scanning dependencies of target tcpclient_reg1
+[ 29%] Building CXX object muduo/net/tests/CMakeFiles/tcpclient_reg1.dir/TcpClient_reg1.cc.o
+[ 29%] Linking CXX executable ../../../bin/tcpclient_reg1
+[ 29%] Built target tcpclient_reg1
+Scanning dependencies of target channel_test
+[ 29%] Building CXX object muduo/net/tests/CMakeFiles/channel_test.dir/Channel_test.cc.o
+[ 29%] Linking CXX executable ../../../bin/channel_test
+[ 29%] Built target channel_test
+Scanning dependencies of target eventloopthread_unittest
+[ 29%] Building CXX object muduo/net/tests/CMakeFiles/eventloopthread_unittest.dir/EventLoopThread_unittest.cc.o
+[ 30%] Linking CXX executable ../../../bin/eventloopthread_unittest
+[ 30%] Built target eventloopthread_unittest
+Scanning dependencies of target tcpclient_reg2
+[ 30%] Building CXX object muduo/net/tests/CMakeFiles/tcpclient_reg2.dir/TcpClient_reg2.cc.o
+[ 31%] Linking CXX executable ../../../bin/tcpclient_reg2
+[ 31%] Built target tcpclient_reg2
+Scanning dependencies of target eventloopthreadpool_unittest
+[ 31%] Building CXX object muduo/net/tests/CMakeFiles/eventloopthreadpool_unittest.dir/EventLoopThreadPool_unittest.cc.o
+[ 31%] Linking CXX executable ../../../bin/eventloopthreadpool_unittest
+[ 31%] Built target eventloopthreadpool_unittest
+Scanning dependencies of target echoserver_unittest
+[ 31%] Building CXX object muduo/net/tests/CMakeFiles/echoserver_unittest.dir/EchoServer_unittest.cc.o
+[ 32%] Linking CXX executable ../../../bin/echoserver_unittest
+[ 32%] Built target echoserver_unittest
+Scanning dependencies of target inetaddress_unittest
+[ 32%] Building CXX object muduo/net/tests/CMakeFiles/inetaddress_unittest.dir/InetAddress_unittest.cc.o
+[ 34%] Linking CXX executable ../../../bin/inetaddress_unittest
+[ 34%] Built target inetaddress_unittest
+Scanning dependencies of target zlibstream_unittest
+[ 34%] Building CXX object muduo/net/tests/CMakeFiles/zlibstream_unittest.dir/ZlibStream_unittest.cc.o
+[ 35%] Linking CXX executable ../../../bin/zlibstream_unittest
+[ 35%] Built target zlibstream_unittest
+Scanning dependencies of target muduo_protobuf_codec
+[ 35%] Building CXX object muduo/net/protobuf/CMakeFiles/muduo_protobuf_codec.dir/ProtobufCodecLite.cc.o
+[ 35%] Linking CXX static library ../../../lib/libmuduo_protobuf_codec.a
+[ 35%] Built target muduo_protobuf_codec
+[ 36%] Generating rpc.pb.cc, rpc.pb.h
+Scanning dependencies of target muduo_protorpc_wire
+[ 36%] Building CXX object muduo/net/protorpc/CMakeFiles/muduo_protorpc_wire.dir/rpc.pb.cc.o
+[ 36%] Building CXX object muduo/net/protorpc/CMakeFiles/muduo_protorpc_wire.dir/RpcCodec.cc.o
+[ 36%] Linking CXX static library ../../../lib/libmuduo_protorpc_wire.a
+[ 36%] Built target muduo_protorpc_wire
+Scanning dependencies of target protobuf_rpc_wire_test
+[ 36%] Building CXX object muduo/net/protorpc/CMakeFiles/protobuf_rpc_wire_test.dir/RpcCodec_test.cc.o
+[ 37%] Linking CXX executable ../../../bin/protobuf_rpc_wire_test
+[ 37%] Built target protobuf_rpc_wire_test
+Scanning dependencies of target muduo_protorpc
+[ 38%] Building CXX object muduo/net/protorpc/CMakeFiles/muduo_protorpc.dir/RpcChannel.cc.o
+[ 38%] Building CXX object muduo/net/protorpc/CMakeFiles/muduo_protorpc.dir/RpcServer.cc.o
+[ 38%] Linking CXX static library ../../../lib/libmuduo_protorpc.a
+[ 38%] Built target muduo_protorpc
+Scanning dependencies of target asio_chat_server_threaded
+[ 38%] Building CXX object examples/asio/chat/CMakeFiles/asio_chat_server_threaded.dir/server_threaded.cc.o
+[ 39%] Linking CXX executable ../../../bin/asio_chat_server_threaded
+[ 39%] Built target asio_chat_server_threaded
+Scanning dependencies of target asio_chat_server
+[ 40%] Building CXX object examples/asio/chat/CMakeFiles/asio_chat_server.dir/server.cc.o
+[ 40%] Linking CXX executable ../../../bin/asio_chat_server
+[ 40%] Built target asio_chat_server
+Scanning dependencies of target asio_chat_loadtest
+[ 40%] Building CXX object examples/asio/chat/CMakeFiles/asio_chat_loadtest.dir/loadtest.cc.o
+[ 40%] Linking CXX executable ../../../bin/asio_chat_loadtest
+[ 40%] Built target asio_chat_loadtest
+Scanning dependencies of target asio_chat_client
+[ 41%] Building CXX object examples/asio/chat/CMakeFiles/asio_chat_client.dir/client.cc.o
+[ 41%] Linking CXX executable ../../../bin/asio_chat_client
+[ 41%] Built target asio_chat_client
+Scanning dependencies of target asio_chat_server_threaded_efficient
+[ 41%] Building CXX object examples/asio/chat/CMakeFiles/asio_chat_server_threaded_efficient.dir/server_threaded_efficient.cc.o
+[ 41%] Linking CXX executable ../../../bin/asio_chat_server_threaded_efficient
+[ 41%] Built target asio_chat_server_threaded_efficient
+Scanning dependencies of target asio_chat_server_threaded_highperformance
+[ 41%] Building CXX object examples/asio/chat/CMakeFiles/asio_chat_server_threaded_highperformance.dir/server_threaded_highperformance.cc.o
+[ 42%] Linking CXX executable ../../../bin/asio_chat_server_threaded_highperformance
+[ 42%] Built target asio_chat_server_threaded_highperformance
+Scanning dependencies of target asio_tutorial_timer5
+[ 42%] Building CXX object examples/asio/tutorial/CMakeFiles/asio_tutorial_timer5.dir/timer5/timer.cc.o
+[ 43%] Linking CXX executable ../../../bin/asio_tutorial_timer5
+[ 43%] Built target asio_tutorial_timer5
+Scanning dependencies of target asio_tutorial_timer3
+[ 43%] Building CXX object examples/asio/tutorial/CMakeFiles/asio_tutorial_timer3.dir/timer3/timer.cc.o
+[ 45%] Linking CXX executable ../../../bin/asio_tutorial_timer3
+[ 45%] Built target asio_tutorial_timer3
+Scanning dependencies of target asio_tutorial_timer2
+[ 45%] Building CXX object examples/asio/tutorial/CMakeFiles/asio_tutorial_timer2.dir/timer2/timer.cc.o
+[ 45%] Linking CXX executable ../../../bin/asio_tutorial_timer2
+[ 45%] Built target asio_tutorial_timer2
+Scanning dependencies of target asio_tutorial_timer6
+[ 45%] Building CXX object examples/asio/tutorial/CMakeFiles/asio_tutorial_timer6.dir/timer6/timer.cc.o
+[ 45%] Linking CXX executable ../../../bin/asio_tutorial_timer6
+[ 45%] Built target asio_tutorial_timer6
+Scanning dependencies of target asio_tutorial_timer4
+[ 45%] Building CXX object examples/asio/tutorial/CMakeFiles/asio_tutorial_timer4.dir/timer4/timer.cc.o
+[ 45%] Linking CXX executable ../../../bin/asio_tutorial_timer4
+[ 45%] Built target asio_tutorial_timer4
+Scanning dependencies of target fastcgi_test
+[ 45%] Building CXX object examples/fastcgi/CMakeFiles/fastcgi_test.dir/fastcgi.cc.o
+[ 45%] Building CXX object examples/fastcgi/CMakeFiles/fastcgi_test.dir/fastcgi_test.cc.o
+[ 45%] Building CXX object examples/fastcgi/CMakeFiles/fastcgi_test.dir/__/sudoku/sudoku.cc.o
+[ 46%] Linking CXX executable ../../bin/fastcgi_test
+[ 46%] Built target fastcgi_test
+Scanning dependencies of target filetransfer_download
+[ 46%] Building CXX object examples/filetransfer/CMakeFiles/filetransfer_download.dir/download.cc.o
+[ 46%] Linking CXX executable ../../bin/filetransfer_download
+[ 46%] Built target filetransfer_download
+Scanning dependencies of target filetransfer_download2
+[ 47%] Building CXX object examples/filetransfer/CMakeFiles/filetransfer_download2.dir/download2.cc.o
+[ 47%] Linking CXX executable ../../bin/filetransfer_download2
+[ 47%] Built target filetransfer_download2
+Scanning dependencies of target filetransfer_download3
+[ 47%] Building CXX object examples/filetransfer/CMakeFiles/filetransfer_download3.dir/download3.cc.o
+[ 47%] Linking CXX executable ../../bin/filetransfer_download3
+[ 47%] Built target filetransfer_download3
+Scanning dependencies of target muduo_pubsub
+[ 48%] Building CXX object examples/hub/CMakeFiles/muduo_pubsub.dir/pubsub.cc.o
+[ 48%] Building CXX object examples/hub/CMakeFiles/muduo_pubsub.dir/codec.cc.o
+[ 48%] Linking CXX static library ../../lib/libmuduo_pubsub.a
+[ 48%] Built target muduo_pubsub
+Scanning dependencies of target sub
+[ 49%] Building CXX object examples/hub/CMakeFiles/sub.dir/sub.cc.o
+[ 49%] Linking CXX executable ../../bin/sub
+[ 49%] Built target sub
+Scanning dependencies of target pub
+[ 49%] Building CXX object examples/hub/CMakeFiles/pub.dir/pub.cc.o
+[ 50%] Linking CXX executable ../../bin/pub
+[ 50%] Built target pub
+Scanning dependencies of target hub
+[ 50%] Building CXX object examples/hub/CMakeFiles/hub.dir/hub.cc.o
+[ 51%] Building CXX object examples/hub/CMakeFiles/hub.dir/codec.cc.o
+[ 51%] Linking CXX executable ../../bin/hub
+[ 51%] Built target hub
+Scanning dependencies of target idleconnection_echo
+[ 51%] Building CXX object examples/idleconnection/CMakeFiles/idleconnection_echo.dir/echo.cc.o
+[ 51%] Building CXX object examples/idleconnection/CMakeFiles/idleconnection_echo.dir/main.cc.o
+[ 52%] Linking CXX executable ../../bin/idleconnection_echo
+[ 52%] Built target idleconnection_echo
+Scanning dependencies of target idleconnection_echo2
+[ 52%] Building CXX object examples/idleconnection/CMakeFiles/idleconnection_echo2.dir/sortedlist.cc.o
+[ 52%] Linking CXX executable ../../bin/idleconnection_echo2
+[ 52%] Built target idleconnection_echo2
+Scanning dependencies of target maxconnection_echo
+[ 53%] Building CXX object examples/maxconnection/CMakeFiles/maxconnection_echo.dir/echo.cc.o
+[ 53%] Building CXX object examples/maxconnection/CMakeFiles/maxconnection_echo.dir/main.cc.o
+[ 53%] Linking CXX executable ../../bin/maxconnection_echo
+[ 53%] Built target maxconnection_echo
+Scanning dependencies of target memcached_footprint
+[ 53%] Building CXX object examples/memcached/server/CMakeFiles/memcached_footprint.dir/Item.cc.o
+[ 53%] Building CXX object examples/memcached/server/CMakeFiles/memcached_footprint.dir/MemcacheServer.cc.o
+[ 54%] Building CXX object examples/memcached/server/CMakeFiles/memcached_footprint.dir/Session.cc.o
+[ 54%] Building CXX object examples/memcached/server/CMakeFiles/memcached_footprint.dir/footprint_test.cc.o
+[ 54%] Linking CXX executable ../../../bin/memcached_footprint
+[ 54%] Built target memcached_footprint
+Scanning dependencies of target multiplex_demux
+[ 54%] Building CXX object examples/multiplexer/CMakeFiles/multiplex_demux.dir/demux.cc.o
+[ 56%] Linking CXX executable ../../bin/multiplex_demux
+[ 56%] Built target multiplex_demux
+Scanning dependencies of target multiplex_server
+[ 56%] Building CXX object examples/multiplexer/CMakeFiles/multiplex_server.dir/multiplexer.cc.o
+[ 56%] Linking CXX executable ../../bin/multiplex_server
+[ 56%] Built target multiplex_server
+Scanning dependencies of target multiplex_server_simple
+[ 56%] Building CXX object examples/multiplexer/CMakeFiles/multiplex_server_simple.dir/multiplexer_simple.cc.o
+[ 57%] Linking CXX executable ../../bin/multiplex_server_simple
+[ 57%] Built target multiplex_server_simple
+Scanning dependencies of target netty_discard_client
+[ 57%] Building CXX object examples/netty/discard/CMakeFiles/netty_discard_client.dir/client.cc.o
+[ 58%] Linking CXX executable ../../../bin/netty_discard_client
+[ 58%] Built target netty_discard_client
+Scanning dependencies of target netty_discard_server
+[ 58%] Building CXX object examples/netty/discard/CMakeFiles/netty_discard_server.dir/server.cc.o
+[ 58%] Linking CXX executable ../../../bin/netty_discard_server
+[ 58%] Built target netty_discard_server
+Scanning dependencies of target netty_echo_client
+[ 58%] Building CXX object examples/netty/echo/CMakeFiles/netty_echo_client.dir/client.cc.o
+[ 59%] Linking CXX executable ../../../bin/netty_echo_client
+[ 59%] Built target netty_echo_client
+Scanning dependencies of target netty_echo_server
+[ 59%] Building CXX object examples/netty/echo/CMakeFiles/netty_echo_server.dir/server.cc.o
+[ 59%] Linking CXX executable ../../../bin/netty_echo_server
+[ 59%] Built target netty_echo_server
+Scanning dependencies of target netty_echo_server2
+[ 60%] Building CXX object examples/netty/echo/CMakeFiles/netty_echo_server2.dir/server2.cc.o
+[ 60%] Linking CXX executable ../../../bin/netty_echo_server2
+[ 60%] Built target netty_echo_server2
+Scanning dependencies of target netty_uptime
+[ 60%] Building CXX object examples/netty/uptime/CMakeFiles/netty_uptime.dir/uptime.cc.o
+[ 60%] Linking CXX executable ../../../bin/netty_uptime
+[ 60%] Built target netty_uptime
+Scanning dependencies of target pingpong_client
+[ 60%] Building CXX object examples/pingpong/CMakeFiles/pingpong_client.dir/client.cc.o
+[ 60%] Linking CXX executable ../../bin/pingpong_client
+[ 60%] Built target pingpong_client
+Scanning dependencies of target pingpong_bench
+[ 61%] Building CXX object examples/pingpong/CMakeFiles/pingpong_bench.dir/bench.cc.o
+[ 61%] Linking CXX executable ../../bin/pingpong_bench
+[ 61%] Built target pingpong_bench
+Scanning dependencies of target pingpong_server
+[ 62%] Building CXX object examples/pingpong/CMakeFiles/pingpong_server.dir/server.cc.o
+[ 62%] Linking CXX executable ../../bin/pingpong_server
+[ 62%] Built target pingpong_server
+Scanning dependencies of target roundtrip
+[ 62%] Building CXX object examples/roundtrip/CMakeFiles/roundtrip.dir/roundtrip.cc.o
+[ 63%] Linking CXX executable ../../bin/roundtrip
+[ 63%] Built target roundtrip
+Scanning dependencies of target roundtrip_udp
+[ 63%] Building CXX object examples/roundtrip/CMakeFiles/roundtrip_udp.dir/roundtrip_udp.cc.o
+[ 63%] Linking CXX executable ../../bin/roundtrip_udp
+[ 63%] Built target roundtrip_udp
+Scanning dependencies of target shorturl
+[ 64%] Building CXX object examples/shorturl/CMakeFiles/shorturl.dir/shorturl.cc.o
+[ 64%] Linking CXX executable ../../bin/shorturl
+[ 64%] Built target shorturl
+Scanning dependencies of target simple_daytime
+[ 64%] Building CXX object examples/simple/CMakeFiles/simple_daytime.dir/daytime/daytime.cc.o
+[ 65%] Building CXX object examples/simple/CMakeFiles/simple_daytime.dir/daytime/main.cc.o
+[ 65%] Linking CXX executable ../../bin/simple_daytime
+[ 65%] Built target simple_daytime
+Scanning dependencies of target simple_allinone
+[ 65%] Building CXX object examples/simple/CMakeFiles/simple_allinone.dir/allinone/allinone.cc.o
+[ 65%] Building CXX object examples/simple/CMakeFiles/simple_allinone.dir/chargen/chargen.cc.o
+[ 67%] Building CXX object examples/simple/CMakeFiles/simple_allinone.dir/daytime/daytime.cc.o
+[ 67%] Building CXX object examples/simple/CMakeFiles/simple_allinone.dir/discard/discard.cc.o
+[ 67%] Building CXX object examples/simple/CMakeFiles/simple_allinone.dir/echo/echo.cc.o
+[ 67%] Building CXX object examples/simple/CMakeFiles/simple_allinone.dir/time/time.cc.o
+[ 68%] Linking CXX executable ../../bin/simple_allinone
+[ 68%] Built target simple_allinone
+Scanning dependencies of target simple_echo
+[ 68%] Building CXX object examples/simple/CMakeFiles/simple_echo.dir/echo/echo.cc.o
+[ 68%] Building CXX object examples/simple/CMakeFiles/simple_echo.dir/echo/main.cc.o
+[ 68%] Linking CXX executable ../../bin/simple_echo
+[ 68%] Built target simple_echo
+Scanning dependencies of target simple_discard
+[ 68%] Building CXX object examples/simple/CMakeFiles/simple_discard.dir/discard/discard.cc.o
+[ 68%] Building CXX object examples/simple/CMakeFiles/simple_discard.dir/discard/main.cc.o
+[ 69%] Linking CXX executable ../../bin/simple_discard
+[ 69%] Built target simple_discard
+Scanning dependencies of target simple_chargen
+[ 69%] Building CXX object examples/simple/CMakeFiles/simple_chargen.dir/chargen/chargen.cc.o
+[ 69%] Building CXX object examples/simple/CMakeFiles/simple_chargen.dir/chargen/main.cc.o
+[ 69%] Linking CXX executable ../../bin/simple_chargen
+[ 69%] Built target simple_chargen
+Scanning dependencies of target simple_timeclient
+[ 70%] Building CXX object examples/simple/CMakeFiles/simple_timeclient.dir/timeclient/timeclient.cc.o
+[ 70%] Linking CXX executable ../../bin/simple_timeclient
+[ 70%] Built target simple_timeclient
+Scanning dependencies of target simple_time
+[ 71%] Building CXX object examples/simple/CMakeFiles/simple_time.dir/time/time.cc.o
+[ 71%] Building CXX object examples/simple/CMakeFiles/simple_time.dir/time/main.cc.o
+[ 71%] Linking CXX executable ../../bin/simple_time
+[ 71%] Built target simple_time
+Scanning dependencies of target simple_chargenclient
+[ 72%] Building CXX object examples/simple/CMakeFiles/simple_chargenclient.dir/chargenclient/chargenclient.cc.o
+[ 72%] Linking CXX executable ../../bin/simple_chargenclient
+[ 72%] Built target simple_chargenclient
+Scanning dependencies of target balancer
+[ 73%] Building CXX object examples/socks4a/CMakeFiles/balancer.dir/balancer.cc.o
+[ 73%] Linking CXX executable ../../bin/balancer
+[ 73%] Built target balancer
+Scanning dependencies of target tcprelay
+[ 74%] Building CXX object examples/socks4a/CMakeFiles/tcprelay.dir/tcprelay.cc.o
+[ 74%] Linking CXX executable ../../bin/tcprelay
+[ 74%] Built target tcprelay
+Scanning dependencies of target socks4a
+[ 74%] Building CXX object examples/socks4a/CMakeFiles/socks4a.dir/socks4a.cc.o
+[ 74%] Linking CXX executable ../../bin/socks4a
+[ 74%] Built target socks4a
+Scanning dependencies of target sudoku_solver_threadpool
+[ 75%] Building CXX object examples/sudoku/CMakeFiles/sudoku_solver_threadpool.dir/server_threadpool.cc.o
+[ 75%] Building CXX object examples/sudoku/CMakeFiles/sudoku_solver_threadpool.dir/sudoku.cc.o
+[ 75%] Linking CXX executable ../../bin/sudoku_solver_threadpool
+[ 75%] Built target sudoku_solver_threadpool
+Scanning dependencies of target sudoku_solver_multiloop
+[ 75%] Building CXX object examples/sudoku/CMakeFiles/sudoku_solver_multiloop.dir/server_multiloop.cc.o
+[ 75%] Building CXX object examples/sudoku/CMakeFiles/sudoku_solver_multiloop.dir/sudoku.cc.o
+[ 76%] Linking CXX executable ../../bin/sudoku_solver_multiloop
+[ 76%] Built target sudoku_solver_multiloop
+Scanning dependencies of target sudoku_solver_basic
+[ 76%] Building CXX object examples/sudoku/CMakeFiles/sudoku_solver_basic.dir/server_basic.cc.o
+[ 78%] Building CXX object examples/sudoku/CMakeFiles/sudoku_solver_basic.dir/sudoku.cc.o
+[ 78%] Linking CXX executable ../../bin/sudoku_solver_basic
+[ 78%] Built target sudoku_solver_basic
+Scanning dependencies of target sudoku_loadtest
+[ 78%] Building CXX object examples/sudoku/CMakeFiles/sudoku_loadtest.dir/loadtest.cc.o
+[ 78%] Building CXX object examples/sudoku/CMakeFiles/sudoku_loadtest.dir/sudoku.cc.o
+[ 78%] Linking CXX executable ../../bin/sudoku_loadtest
+[ 78%] Built target sudoku_loadtest
+Scanning dependencies of target sudoku_solver_hybrid
+[ 78%] Building CXX object examples/sudoku/CMakeFiles/sudoku_solver_hybrid.dir/server_hybrid.cc.o
+[ 78%] Building CXX object examples/sudoku/CMakeFiles/sudoku_solver_hybrid.dir/sudoku.cc.o
+[ 79%] Linking CXX executable ../../bin/sudoku_solver_hybrid
+[ 79%] Built target sudoku_solver_hybrid
+Scanning dependencies of target sudoku_solver_prod
+[ 79%] Building CXX object examples/sudoku/CMakeFiles/sudoku_solver_prod.dir/server_prod.cc.o
+[ 79%] Building CXX object examples/sudoku/CMakeFiles/sudoku_solver_prod.dir/sudoku.cc.o
+[ 79%] Linking CXX executable ../../bin/sudoku_solver_prod
+[ 79%] Built target sudoku_solver_prod
+Scanning dependencies of target sudoku_client_batch
+[ 79%] Building CXX object examples/sudoku/CMakeFiles/sudoku_client_batch.dir/batch.cc.o
+[ 79%] Building CXX object examples/sudoku/CMakeFiles/sudoku_client_batch.dir/sudoku.cc.o
+[ 80%] Linking CXX executable ../../bin/sudoku_client_batch
+[ 80%] Built target sudoku_client_batch
+Scanning dependencies of target sudoku_stat_unittest
+[ 80%] Building CXX object examples/sudoku/CMakeFiles/sudoku_stat_unittest.dir/stat_unittest.cc.o
+[ 81%] Linking CXX executable ../../bin/sudoku_stat_unittest
+[ 81%] Built target sudoku_stat_unittest
+Scanning dependencies of target sudoku_client_pipeline
+[ 81%] Building CXX object examples/sudoku/CMakeFiles/sudoku_client_pipeline.dir/pipeline.cc.o
+[ 81%] Building CXX object examples/sudoku/CMakeFiles/sudoku_client_pipeline.dir/sudoku.cc.o
+[ 82%] Linking CXX executable ../../bin/sudoku_client_pipeline
+[ 82%] Built target sudoku_client_pipeline
+Scanning dependencies of target twisted_finger03
+[ 82%] Building CXX object examples/twisted/finger/CMakeFiles/twisted_finger03.dir/finger03.cc.o
+[ 83%] Linking CXX executable ../../../bin/twisted_finger03
+[ 83%] Built target twisted_finger03
+Scanning dependencies of target twisted_finger01
+[ 83%] Building CXX object examples/twisted/finger/CMakeFiles/twisted_finger01.dir/finger01.cc.o
+[ 84%] Linking CXX executable ../../../bin/twisted_finger01
+[ 84%] Built target twisted_finger01
+Scanning dependencies of target twisted_finger02
+[ 84%] Building CXX object examples/twisted/finger/CMakeFiles/twisted_finger02.dir/finger02.cc.o
+[ 84%] Linking CXX executable ../../../bin/twisted_finger02
+[ 84%] Built target twisted_finger02
+Scanning dependencies of target twisted_finger04
+[ 84%] Building CXX object examples/twisted/finger/CMakeFiles/twisted_finger04.dir/finger04.cc.o
+[ 84%] Linking CXX executable ../../../bin/twisted_finger04
+[ 84%] Built target twisted_finger04
+Scanning dependencies of target twisted_finger07
+[ 85%] Building CXX object examples/twisted/finger/CMakeFiles/twisted_finger07.dir/finger07.cc.o
+[ 85%] Linking CXX executable ../../../bin/twisted_finger07
+[ 85%] Built target twisted_finger07
+Scanning dependencies of target twisted_finger05
+[ 85%] Building CXX object examples/twisted/finger/CMakeFiles/twisted_finger05.dir/finger05.cc.o
+[ 86%] Linking CXX executable ../../../bin/twisted_finger05
+[ 86%] Built target twisted_finger05
+Scanning dependencies of target twisted_finger06
+[ 86%] Building CXX object examples/twisted/finger/CMakeFiles/twisted_finger06.dir/finger06.cc.o
+[ 86%] Linking CXX executable ../../../bin/twisted_finger06
+[ 86%] Built target twisted_finger06
+Scanning dependencies of target wordcount_hasher
+[ 86%] Building CXX object examples/wordcount/CMakeFiles/wordcount_hasher.dir/hasher.cc.o
+[ 86%] Linking CXX executable ../../bin/wordcount_hasher
+[ 86%] Built target wordcount_hasher
+Scanning dependencies of target wordcount_receiver
+[ 87%] Building CXX object examples/wordcount/CMakeFiles/wordcount_receiver.dir/receiver.cc.o
+[ 87%] Linking CXX executable ../../bin/wordcount_receiver
+[ 87%] Built target wordcount_receiver
+Scanning dependencies of target zeromq_local_lat
+[ 87%] Building CXX object examples/zeromq/CMakeFiles/zeromq_local_lat.dir/local_lat.cc.o
+[ 87%] Linking CXX executable ../../bin/zeromq_local_lat
+[ 87%] Built target zeromq_local_lat
+Scanning dependencies of target zeromq_remote_lat
+[ 89%] Building CXX object examples/zeromq/CMakeFiles/zeromq_remote_lat.dir/remote_lat.cc.o
+[ 89%] Linking CXX executable ../../bin/zeromq_remote_lat
+[ 89%] Built target zeromq_remote_lat
+Scanning dependencies of target muduo_curl
+[ 89%] Building CXX object examples/curl/CMakeFiles/muduo_curl.dir/Curl.cc.o
+[ 89%] Linking CXX static library ../../lib/libmuduo_curl.a
+[ 89%] Built target muduo_curl
+Scanning dependencies of target mcurl
+[ 89%] Building CXX object examples/curl/CMakeFiles/mcurl.dir/mcurl.cc.o
+[ 90%] Linking CXX executable ../../bin/mcurl
+[ 90%] Built target mcurl
+Scanning dependencies of target curl_download
+[ 90%] Building CXX object examples/curl/CMakeFiles/curl_download.dir/download.cc.o
+[ 91%] Linking CXX executable ../../bin/curl_download
+[ 91%] Built target curl_download
+[ 91%] Generating logrecord.pb.cc, logrecord.pb.h
+Scanning dependencies of target ace_logging_proto
+[ 92%] Building CXX object examples/ace/logging/CMakeFiles/ace_logging_proto.dir/logrecord.pb.cc.o
+[ 92%] Linking CXX static library ../../../lib/libace_logging_proto.a
+[ 92%] Built target ace_logging_proto
+Scanning dependencies of target ace_logging_client
+[ 92%] Building CXX object examples/ace/logging/CMakeFiles/ace_logging_client.dir/client.cc.o
+[ 92%] Linking CXX executable ../../../bin/ace_logging_client
+[ 92%] Built target ace_logging_client
+Scanning dependencies of target ace_logging_server
+[ 92%] Building CXX object examples/ace/logging/CMakeFiles/ace_logging_server.dir/server.cc.o
+[ 92%] Linking CXX executable ../../../bin/ace_logging_server
+[ 92%] Built target ace_logging_server
+[ 92%] Generating query.pb.cc, query.pb.h
+Scanning dependencies of target query_proto
+[ 92%] Building CXX object examples/protobuf/codec/CMakeFiles/query_proto.dir/query.pb.cc.o
+[ 92%] Linking CXX static library ../../../lib/libquery_proto.a
+[ 92%] Built target query_proto
+Scanning dependencies of target protobuf_dispatcher_lite_test
+[ 92%] Building CXX object examples/protobuf/codec/CMakeFiles/protobuf_dispatcher_lite_test.dir/dispatcher_lite_test.cc.o
+[ 92%] Linking CXX executable ../../../bin/protobuf_dispatcher_lite_test
+[ 92%] Built target protobuf_dispatcher_lite_test
+Scanning dependencies of target protobuf_codec
+[ 92%] Building CXX object examples/protobuf/codec/CMakeFiles/protobuf_codec.dir/codec.cc.o
+[ 92%] Linking CXX static library ../../../lib/libprotobuf_codec.a
+[ 92%] Built target protobuf_codec
+Scanning dependencies of target protobuf_client
+[ 92%] Building CXX object examples/protobuf/codec/CMakeFiles/protobuf_client.dir/client.cc.o
+[ 93%] Linking CXX executable ../../../bin/protobuf_client
+[ 93%] Built target protobuf_client
+Scanning dependencies of target protobuf_codec_test
+[ 93%] Building CXX object examples/protobuf/codec/CMakeFiles/protobuf_codec_test.dir/codec_test.cc.o
+[ 94%] Linking CXX executable ../../../bin/protobuf_codec_test
+[ 94%] Built target protobuf_codec_test
+Scanning dependencies of target protobuf_dispatcher_test
+[ 94%] Building CXX object examples/protobuf/codec/CMakeFiles/protobuf_dispatcher_test.dir/dispatcher_test.cc.o
+[ 95%] Linking CXX executable ../../../bin/protobuf_dispatcher_test
+[ 95%] Built target protobuf_dispatcher_test
+Scanning dependencies of target protobuf_server
+[ 95%] Building CXX object examples/protobuf/codec/CMakeFiles/protobuf_server.dir/server.cc.o
+[ 95%] Linking CXX executable ../../../bin/protobuf_server
+[ 95%] Built target protobuf_server
+[ 96%] Generating sudoku.pb.cc, sudoku.pb.h
+Scanning dependencies of target sudoku_proto
+[ 96%] Building CXX object examples/protobuf/rpc/CMakeFiles/sudoku_proto.dir/sudoku.pb.cc.o
+[ 96%] Linking CXX static library ../../../lib/libsudoku_proto.a
+[ 96%] Built target sudoku_proto
+Scanning dependencies of target protobuf_rpc_sudoku_server
+[ 97%] Building CXX object examples/protobuf/rpc/CMakeFiles/protobuf_rpc_sudoku_server.dir/server.cc.o
+[ 97%] Linking CXX executable ../../../bin/protobuf_rpc_sudoku_server
+[ 97%] Built target protobuf_rpc_sudoku_server
+Scanning dependencies of target protobuf_rpc_sudoku_client
+[ 97%] Building CXX object examples/protobuf/rpc/CMakeFiles/protobuf_rpc_sudoku_client.dir/client.cc.o
+[ 97%] Linking CXX executable ../../../bin/protobuf_rpc_sudoku_client
+[ 97%] Built target protobuf_rpc_sudoku_client
+Scanning dependencies of target protobuf_rpc_balancer
+[ 97%] Building CXX object examples/protobuf/rpcbalancer/CMakeFiles/protobuf_rpc_balancer.dir/balancer.cc.o
+[ 97%] Linking CXX executable ../../../bin/protobuf_rpc_balancer
+[ 97%] Built target protobuf_rpc_balancer
+Scanning dependencies of target protobuf_rpc_balancer_raw
+[ 98%] Building CXX object examples/protobuf/rpcbalancer/CMakeFiles/protobuf_rpc_balancer_raw.dir/balancer_raw.cc.o
+[ 98%] Linking CXX executable ../../../bin/protobuf_rpc_balancer_raw
+[ 98%] Built target protobuf_rpc_balancer_raw
+[ 98%] Generating echo.pb.cc, echo.pb.h
+Scanning dependencies of target echo_proto
+[ 98%] Building CXX object examples/protobuf/rpcbench/CMakeFiles/echo_proto.dir/echo.pb.cc.o
+[ 98%] Linking CXX static library ../../../lib/libecho_proto.a
+[ 98%] Built target echo_proto
+Scanning dependencies of target protobuf_rpc_echo_client
+[ 98%] Building CXX object examples/protobuf/rpcbench/CMakeFiles/protobuf_rpc_echo_client.dir/client.cc.o
+[ 98%] Linking CXX executable ../../../bin/protobuf_rpc_echo_client
+[ 98%] Built target protobuf_rpc_echo_client
+Scanning dependencies of target protobuf_rpc_echo_server
+[100%] Building CXX object examples/protobuf/rpcbench/CMakeFiles/protobuf_rpc_echo_server.dir/server.cc.o
+[100%] Linking CXX executable ../../../bin/protobuf_rpc_echo_server
+[100%] Built target protobuf_rpc_echo_server
