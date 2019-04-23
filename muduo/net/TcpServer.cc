@@ -60,6 +60,7 @@ void TcpServer::start()
 {
   if (started_.getAndSet(1) == 0)
   {
+    LOG_DEBUG << "TcpServer::start->start";
     /// 这里面会创建EventLoopThread线程池
     threadPool_->start(threadInitCallback_);
 

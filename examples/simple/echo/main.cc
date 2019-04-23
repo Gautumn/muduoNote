@@ -15,7 +15,12 @@ int main()
   Logger::setLogLevel(Logger::TRACE);
 
   muduo::net::EventLoop loop;
+  LOG_DEBUG << "Event Loop create complete";
+
+
   muduo::net::InetAddress listenAddr(2007);
+
+  LOG_DEBUG << "Create echo server";
   EchoServer server(&loop, listenAddr);
   server.start();
   loop.loop();

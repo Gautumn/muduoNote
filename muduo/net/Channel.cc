@@ -32,6 +32,7 @@ Channel::Channel(EventLoop* loop, int fd__)
     eventHandling_(false),
     addedToLoop_(false)
 {
+  LOG_DEBUG << "Channel construct";
 }
 
 Channel::~Channel()

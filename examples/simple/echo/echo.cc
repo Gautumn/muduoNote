@@ -6,8 +6,8 @@ using std::placeholders::_1;
 using std::placeholders::_2;
 using std::placeholders::_3;
 
-// using namespace muduo;
-// using namespace muduo::net;
+ using namespace muduo;
+ using namespace muduo::net;
 
 EchoServer::EchoServer(muduo::net::EventLoop* loop,
                        const muduo::net::InetAddress& listenAddr)
@@ -21,7 +21,9 @@ EchoServer::EchoServer(muduo::net::EventLoop* loop,
 
 void EchoServer::start()
 {
+  LOG_DEBUG << "Echo server start";
   server_.start();
+  LOG_DEBUG << "Echo server finish";
 }
 
 void EchoServer::onConnection(const muduo::net::TcpConnectionPtr& conn)

@@ -18,6 +18,7 @@
 //#include <sys/types.h>
 //#include <sys/stat.h>
 #include <unistd.h>
+#include "muduo/base/Logging.h"
 
 using namespace muduo;
 using namespace muduo::net;
@@ -29,6 +30,7 @@ Acceptor::Acceptor(EventLoop* loop, const InetAddress& listenAddr, bool reusepor
     listenning_(false),
     idleFd_(::open("/dev/null", O_RDONLY | O_CLOEXEC))
 {
+  LOG_DEBUG << "Acceptor construct";
   assert(idleFd_ >= 0);
   acceptSocket_.setReuseAddr(true);
   acceptSocket_.setReusePort(reuseport);
@@ -46,6 +48,7 @@ Acceptor::~Acceptor()
 
 void Acceptor::listen()
 {
+  LOG_DEBUG << "Acceptor listen";
   loop_->assertInLoopThread();
   listenning_ = true;
   acceptSocket_.listen();
